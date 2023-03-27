@@ -2,11 +2,12 @@ package treball;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Scanner;
 
 public class Tenda {
     private ArrayList<Jugueta> juguetes;
     private ArrayList<Venta> ventes;
+
+    private ArrayList<Proveidor> proveidors;
     private double resultat;
 
 
@@ -24,6 +25,17 @@ public class Tenda {
             }
         }
         return resultat;
+    }
+    public ArrayList <Proveidor> proveidors_juguetes (String jugueta) {
+        ArrayList<Proveidor> providors = new ArrayList<>();
+        for (int i = 0; i < proveidors.size(); i++) {
+            for (int j = 0; j < proveidors.get(i).getCataleg().size(); j++) {
+                if (proveidors.get(i).getCataleg().get(j).equals(jugueta)) {
+                    providors.add(proveidors.get(i));
+                }
+            }
+        }
+        return providors;
     }
 
     public double facturacioClient(int identificadorClient) {
