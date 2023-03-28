@@ -26,7 +26,7 @@ public class Tenda {
         }
         return resultat;
     }
-    public ArrayList <String> proveidors_juguetes (String jugueta) {
+    public ArrayList <String> proveidors_jugueta_preu (String jugueta) {
         ArrayList<String> providors = new ArrayList<>();
         for (int i = 0; i < proveidors.size(); i++) {
             for (int j = 0; j < proveidors.get(i).getCataleg().size(); j++) {
