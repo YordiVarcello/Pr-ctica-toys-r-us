@@ -26,12 +26,12 @@ public class Tenda {
         }
         return resultat;
     }
-    public ArrayList <Proveidor> proveidors_juguetes (String jugueta) {
-        ArrayList<Proveidor> providors = new ArrayList<>();
+    public ArrayList <String> proveidors_juguetes (String jugueta) {
+        ArrayList<String> providors = new ArrayList<>();
         for (int i = 0; i < proveidors.size(); i++) {
             for (int j = 0; j < proveidors.get(i).getCataleg().size(); j++) {
                 if (proveidors.get(i).getCataleg().get(j).equals(jugueta)) {
-                    providors.add(proveidors.get(i));
+                    providors.add(proveidors.get(i) + " " + proveidors.get(i).getCataleg().get(j).getPreu());
                 }
             }
         }
